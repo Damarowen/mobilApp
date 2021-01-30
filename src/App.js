@@ -1,6 +1,12 @@
 import React, { Component } from 'react'
+
+//* below is using destructured
 import { Cardlist } from './components/Cardlist'
-import './App'
+
+//* below is using export function
+import Searchbox  from './components/Searchbox'
+
+import './App.css'
 
 
 class App extends Component {
@@ -8,7 +14,8 @@ class App extends Component {
     super();
 
     this.state = {
-      mobil: []
+      mobil: [],
+      searchField: ''
     }
   }
 
@@ -20,9 +27,18 @@ class App extends Component {
 
 
   render() {
+
+    const { mobil, searchField } = this.state
+    const dataFilter = mobil.filter(x => x.name.toLowerCase().includes(searchField.toLowerCase()))
     return (
       <div className="App">
-        <Cardlist fromApp={this.state.mobil}/>
+        <h1> Robot Database </h1>
+        <Searchbox 
+            placeholder='cari apa'
+            berubah={e => this.setState({ searchField: e.target.value})}
+
+        />
+        <Cardlist fromApp={dataFilter }/>
               </div>
     )
   };
