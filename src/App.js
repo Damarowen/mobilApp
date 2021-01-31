@@ -4,7 +4,7 @@ import React, { Component } from 'react'
 import { Cardlist } from './components/Cardlist'
 
 //* below is using export function
-import Searchbox  from './components/Searchbox'
+import Searchbox from './components/Searchbox'
 
 import './App.css'
 
@@ -19,12 +19,17 @@ class App extends Component {
     }
   }
 
+  //* ini akan jalan setelah constructor dan render phase
   componentDidMount() {
     fetch('https://jsonplaceholder.typicode.com/users')
       .then(res => res.json())
       .then(users => this.setState({ mobil: users }))
   }
 
+  onChange = (e) => {
+    //* this merujuk ke App
+    this.setState({ searchField: e.target.value })
+  }
 
   render() {
 
@@ -33,13 +38,13 @@ class App extends Component {
     return (
       <div className="App">
         <h1> Robot Database </h1>
-        <Searchbox 
-            placeholder='cari apa'
-            berubah={e => this.setState({ searchField: e.target.value})}
+        <Searchbox
+          placeholder='cari apa'
+          berubah={this.onChange}
 
         />
-        <Cardlist fromApp={dataFilter }/>
-              </div>
+        <Cardlist fromApp={dataFilter} />
+      </div>
     )
   };
 }
