@@ -1,16 +1,17 @@
+
+
 import './index.css'
 
-
-
-function Searchbox ({ placeholder, berubah })  {
+export const SearchBox = props => {
     return (
-            <input className='search'
-                //* placeholder dynamic
-                type="search" placeholder={placeholder} onChange={berubah} />
+        <input
+        className='search-box'
+        placeholder={props.placeholder}
+        onChange={props.berubah}
+        type='search'
+      />
 
     )
+ 
 }
-
-export default Searchbox
-
 
