@@ -1,13 +1,13 @@
 
 
-import './index.css'
+import './../index.css'
 
-export const SearchBox = props => {
+const SearchBox = ({placeholder, handleChange }) => {
     return (
         <input
         className='search-box'
-        placeholder={props.placeholder}
-        onChange={props.berubah}
+        placeholder={placeholder}
+        onChange={handleChange}
         type='search'
       />
 
@@ -15,3 +15,4 @@ export const SearchBox = props => {
  
 }
 
+export default SearchBox
