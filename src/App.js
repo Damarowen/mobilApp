@@ -10,12 +10,28 @@ const App = () => {
   const [search, setSearch] = useState('')
   const [loading, setLoading] = useState(false)
 
+
+ 
+
   useEffect(() => {
+
+   const fetchData = () => {
     setLoading(true)
-    fetch('https://jsonplaceholder.typicode.com/users')
+
+    const delay = Math.floor(Math.random() * 1000) + 200;
+
+    const timeout = setTimeout(() => {
+      fetch('https://jsonplaceholder.typicode.com/users')
       .then(res => res.json())
       .then(users => setRobot(users))
+      setLoading(false)
 
+    }, delay);
+  
+    return timeout
+  }
+
+   fetchData()
 
   }, [])
 
@@ -35,7 +51,7 @@ const App = () => {
         handleChange={handleChange}
       />
 
-      <Cardlist fromApp={dataFilter} />
+      <Cardlist fromApp={dataFilter} loading={loading}/>
     </div>
   )
 };
