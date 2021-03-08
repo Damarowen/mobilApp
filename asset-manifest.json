@@ -1,25 +1,26 @@
 {
   "files": {
-    "main.css": "/robotFinder/static/css/main.61642524.chunk.css",
-    "main.js": "/robotFinder/static/js/main.ec049a45.chunk.js",
-    "main.js.map": "/robotFinder/static/js/main.ec049a45.chunk.js.map",
-    "runtime-main.js": "/robotFinder/static/js/runtime-main.08111266.js",
-    "runtime-main.js.map": "/robotFinder/static/js/runtime-main.08111266.js.map",
-    "static/css/2.150d169a.chunk.css": "/robotFinder/static/css/2.150d169a.chunk.css",
-    "static/js/2.0b458364.chunk.js": "/robotFinder/static/js/2.0b458364.chunk.js",
-    "static/js/2.0b458364.chunk.js.map": "/robotFinder/static/js/2.0b458364.chunk.js.map",
-    "static/js/3.124d6f1e.chunk.js": "/robotFinder/static/js/3.124d6f1e.chunk.js",
-    "static/js/3.124d6f1e.chunk.js.map": "/robotFinder/static/js/3.124d6f1e.chunk.js.map",
+    "main.css": "/robotFinder/static/css/main.bc715940.chunk.css",
+    "main.js": "/robotFinder/static/js/main.3092a11e.chunk.js",
+    "main.js.map": "/robotFinder/static/js/main.3092a11e.chunk.js.map",
+    "runtime-main.js": "/robotFinder/static/js/runtime-main.56bd288f.js",
+    "runtime-main.js.map": "/robotFinder/static/js/runtime-main.56bd288f.js.map",
+    "static/css/2.4c97ca4f.chunk.css": "/robotFinder/static/css/2.4c97ca4f.chunk.css",
+    "static/js/2.947ff578.chunk.js": "/robotFinder/static/js/2.947ff578.chunk.js",
+    "static/js/2.947ff578.chunk.js.map": "/robotFinder/static/js/2.947ff578.chunk.js.map",
+    "static/js/3.41bf8d12.chunk.js": "/robotFinder/static/js/3.41bf8d12.chunk.js",
+    "static/js/3.41bf8d12.chunk.js.map": "/robotFinder/static/js/3.41bf8d12.chunk.js.map",
     "index.html": "/robotFinder/index.html",
-    "static/css/2.150d169a.chunk.css.map": "/robotFinder/static/css/2.150d169a.chunk.css.map",
-    "static/css/main.61642524.chunk.css.map": "/robotFinder/static/css/main.61642524.chunk.css.map",
-    "static/js/2.0b458364.chunk.js.LICENSE.txt": "/robotFinder/static/js/2.0b458364.chunk.js.LICENSE.txt"
+    "static/css/2.4c97ca4f.chunk.css.map": "/robotFinder/static/css/2.4c97ca4f.chunk.css.map",
+    "static/css/main.bc715940.chunk.css.map": "/robotFinder/static/css/main.bc715940.chunk.css.map",
+    "static/js/2.947ff578.chunk.js.LICENSE.txt": "/robotFinder/static/js/2.947ff578.chunk.js.LICENSE.txt",
+    "static/media/loader.669e4000.svg": "/robotFinder/static/media/loader.669e4000.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.08111266.js",
-    "static/css/2.150d169a.chunk.css",
-    "static/js/2.0b458364.chunk.js",
-    "static/css/main.61642524.chunk.css",
-    "static/js/main.ec049a45.chunk.js"
+    "static/js/runtime-main.56bd288f.js",
+    "static/css/2.4c97ca4f.chunk.css",
+    "static/js/2.947ff578.chunk.js",
+    "static/css/main.bc715940.chunk.css",
+    "static/js/main.3092a11e.chunk.js"
   ]
 }
