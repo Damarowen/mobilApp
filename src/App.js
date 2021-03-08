@@ -8,30 +8,25 @@ const App = () => {
 
   const [robot, setRobot] = useState([])
   const [search, setSearch] = useState('')
-  const [loading, setLoading] = useState(false)
+  const [loading, setLoading] = useState(true)
 
-
- 
 
   useEffect(() => {
 
-   const fetchData = () => {
-    setLoading(true)
+    const fetchData = async () => {
 
-    const delay = Math.floor(Math.random() * 1000) + 200;
+      const timeout = setTimeout(async () => {
+        const res = await fetch('https://jsonplaceholder.typicode.com/users')
+        const data = await res.json();
+        setRobot(data)
+        setLoading(false)
 
-    const timeout = setTimeout(() => {
-      fetch('https://jsonplaceholder.typicode.com/users')
-      .then(res => res.json())
-      .then(users => setRobot(users))
-      setLoading(false)
+      }, 2000);
 
-    }, delay);
-  
-    return timeout
-  }
+      return timeout
+    }
 
-   fetchData()
+    fetchData()
 
   }, [])
 
@@ -41,17 +36,16 @@ const App = () => {
 
   //* search has been update with setSEARCH
   const dataFilter = robot.filter(x => x.name.toLowerCase().includes(search.toLowerCase()))
-
   return (
     <div className="App">
       <h1> Robot Database </h1>
-      {/* {this.state.loading ? <ReactBootStrap.Spinner animation='border'/> : ""} */}
       <SearchBox
         placeholder='cari apa'
         handleChange={handleChange}
       />
 
-      <Cardlist fromApp={dataFilter} loading={loading}/>
+     <Cardlist fromApp={dataFilter} loading={loading} data={dataFilter}/>
+
     </div>
   )
 };
